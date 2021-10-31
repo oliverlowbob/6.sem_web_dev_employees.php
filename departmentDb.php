@@ -21,18 +21,4 @@
 
     $stmt=$pdo->query($departmentsQuery);
     $departmentsInfo = $stmt->fetchAll();
-
-    $employeesQuery = "SELECT last_name, first_name, dept_name, gender, birth_date, hire_date, salary 
-    FROM employees AS e
-    INNER JOIN employees.dept_manager AS dm
-    ON e.emp_no = dm.emp_no
-    INNER JOIN employees.departments AS d
-    ON dm.dept_no = d.dept_no
-    INNER JOIN salaries AS s
-    ON e.emp_no = s.emp_no;
-    ";
-
-    $stmt2=$pdo->query($employeesQuery);
-    $employeeInfo = $stmt2->fetchAll();
-    print_r($employeeInfo);
 ?>

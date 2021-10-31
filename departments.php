@@ -1,6 +1,6 @@
 <?php
 include_once("header.php");
-include_once("departmentsDb.php");
+include_once("departmentDb.php");
 ?>
 <h1>Departments</h1>
 
